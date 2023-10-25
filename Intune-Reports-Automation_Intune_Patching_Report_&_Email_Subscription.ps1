@@ -154,7 +154,7 @@ Write-Host "Downoading Patch List from Microsoft"-ForegroundColor yellow
 $URI = "https://aka.ms/Windows11UpdateHistory";
 $CollectedData += (Invoke-WebRequest -Uri $URI -UseBasicParsing -ErrorAction Continue).Links;
 #$URI = "https://aka.ms/WindowsUpdateHistory";
-$URI = 'https://support.microsoft.com/en-us/help/4043454';
+$URI = "https://support.microsoft.com/en-us/help/4043454";
 $CollectedData += (Invoke-WebRequest -Uri $URI -UseBasicParsing -ErrorAction Continue).Links;
 
 #Filter Windows Master Patch List
