@@ -33,7 +33,6 @@ Youtube:-        https://www.youtube.com/@chandermanipandey8763
 Twitter:-        https://twitter.com/Mani_CMPandey
 Facebook:-       https://www.facebook.com/profile.php?id=100087275409143&mibextid=ZbWKwL
 LinkedIn:-       https://www.linkedin.com/in/chandermanipandey
-Reddit:-         https://www.reddit.com/u/ChanderManiPandey 
 #>
 
 $error.clear() ## this is the clear error history 
@@ -130,7 +129,7 @@ $buildInfoArray = @()
 #Creating working Folder
 
 # Add each Build and Operating System to the array
-"22623,Windows 11 22H2","22621,Windows 11 22H2 B1","22471,Windows 11 21H2","22468,Windows 11 21H2 B6","22463,Windows 11 21H2 B5",
+"22631,Windows 11 23H2","22623,Windows 11 22H2","22621,Windows 11 22H2 B1","22471,Windows 11 21H2","22468,Windows 11 21H2 B6","22463,Windows 11 21H2 B5",
 "22458,Windows 11 21H2 B4","22454,Windows 11 21H2 B3","22449,Windows 11 21H2 B2","22000,Windows 11 21H2 B1","21996,Windows 11 Dev",
 "19045,Windows 10 22H2","19044,Windows 10 21H2","19043,Windows 10 21H1","19042,Windows 10 20H2","19041,Windows 10 2004","19008,Windows 10 20H1",
 "18363,Windows 10 1909","18362,Windows 10 1903","17763,Windows 10 1809","17134,Windows 10 1803","16299,Windows 10 1709 FC","15254,Windows 10 1709",
