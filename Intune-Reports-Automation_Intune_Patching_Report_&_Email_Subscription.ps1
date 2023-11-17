@@ -1,4 +1,4 @@
-﻿<# 
+<# 
 .SYNOPSIS
 <Intune_Patch_Compliance_Calculation_&_Email_Subscription Using PowerShell>
 #>
@@ -77,8 +77,9 @@ Write-Host "Checking Microsoft.Graph.Intune is Installed or Not"
     }
 $tenant = $tenant
 $authority = “https://login.windows.net/$tenant”
-$clientId = $clientId  
+$clientId = $clientId
 $clientSecret = $clientSecret
+
 Update-MSGraphEnvironment -AppId $clientId -Quiet
 Update-MSGraphEnvironment -AuthUrl $authority -Quiet
 Connect-MSGraph -ClientSecret $ClientSecret -Quiet
@@ -303,7 +304,8 @@ foreach ($device in $DevicesInfos) {
            "Win10-1703"} ElseIf ($OSVersion -eq "16299") {"Win10-1709"} ElseIf ($OSVersion -eq "17134") {"Win10-1803"} ElseIf ($OSVersion -eq "17763") {'Win10-1809'} ElseIf ($OSVersion -eq '18362') {
            "Win10-1903"} ElseIf ($OSVersion -eq "18363") {"Win10-1909"} ElseIf ($OSVersion -eq "19041") {"Win10-2004"} ElseIf ($OSVersion -eq "19042") {"Win10-20H2"} ElseIf ($OSVersion -eq "19043") {
            "Win10-21H1"} ElseIf ($OSVersion -eq "19044") {"Win10-21H2"} ElseIf ($OSVersion -eq "19045") {"Win10-22H2"} ElseIf ($OSVersion -eq "22000") {"Win11-21H2"} ElseIf ($OSVersion -eq "22621") {
-           "Win11-22H2"}ElseIf ($OSVersion -eq "0") {"0.0.0.0"}ElseIf ($OSVersion -eq "7601") {"Win7-Or-Server"}ElseIf ($OSVersion -eq $null) {"No OS version"}Else {$deviceOSVersion }
+           "Win11-22H2"} ElseIf ($OSVersion -eq "22631") {"Win11-23H2"} ElseIf ($OSVersion -eq "0") {"No OS version"}ElseIf ($OSVersion -eq "7601") {"Win7-Or-Server"} 
+            ElseIf ($OSVersion -eq $null) {"No OS version"}Else {$deviceOSVersion }
     $Ownership = $device.Ownership
     #$Lastcheckin =([DateTime]$device."Last check-in").ToString("dd-MMM-yy")
     $Lastcheckin = ""
@@ -482,4 +484,4 @@ $endTime = Get-Date
 $duration = $endTime - $startTime
 
 Write-Host "Time duation to successfully excute this script is:- $duration" -ForegroundColor Green
-#Invoke-Item -Path $Final_Patching_Report
+Invoke-Item -Path $Final_Patching_Report
