@@ -150,7 +150,7 @@ $buildInfoArray = @()
 $CollectedData = $BuildDetails = $PatchDetails = $MajorBuilds = $LatestPatches = @();
 $BuildDetails = $buildInfoArray
 #Download Windows Master Patch List
-Write-Host "Downoading Patch List from Microsoft"-ForegroundColor yellow
+Write-Host "Downloading Patch List from Microsoft"-ForegroundColor yellow
 $URI = "https://aka.ms/Windows11UpdateHistory";
 $CollectedData += (Invoke-WebRequest -Uri $URI -UseBasicParsing -ErrorAction Continue).Links;
 #$URI = "https://aka.ms/WindowsUpdateHistory";
